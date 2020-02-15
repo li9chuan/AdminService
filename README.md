@@ -6,7 +6,7 @@ windows可以启动以下批处理测试服务：
 ```cpp
 AdminModule\code\test\app\start_connect_local_svr.bat
 ```
-![](http://imgs.mulanshanzhuang.com/admin/admin_web_exec.jpg)
+![img](http://imgs.mulanshanzhuang.com/admin/admin_web_exec.jpg)
 
 
 ## 一、定义命令&连接管理器
@@ -27,18 +27,18 @@ AdminModule.releaseAdmin();
 ```
 ##### 6. 定义Command
 ```cpp
-	// I want to create a function that computes the square of the parameter and display the result
-	NLMISC_COMMAND(square,"display the square of the parameter","<value>")
-	{
-		// check args, if there s not the right number of parameter, return bad
-		if(args.size() != 1) return false;
-		// get the value
-		uint32 val;
-		fromString(args[0], val);
-		// display the result on the displayer
-		log.displayNL("The square of %d is %d", val, val*val);
-		return true;
-	}
+// I want to create a function that computes the square of the parameter and display the result
+NLMISC_COMMAND(square,"display the square of the parameter","<value>")
+{
+	// check args, if there s not the right number of parameter, return bad
+	if(args.size() != 1) return false;
+	// get the value
+	uint32 val;
+	fromString(args[0], val);
+	// display the result on the displayer
+	log.displayNL("The square of %d is %d", val, val*val);
+	return true;
+}
 ```
 ##### 7. 通过web端调用Command
 
@@ -54,11 +54,11 @@ cd build
 cmake ../code
 make
 ```
-![](http://imgs.mulanshanzhuang.com/admin/admin_serv_make.jpg)
+![img](http://imgs.mulanshanzhuang.com/admin/admin_serv_make.jpg)
 ```shell
 make install
 ```
-![](http://imgs.mulanshanzhuang.com/admin/admin_serv_makeinstall.jpg)
+![img](http://imgs.mulanshanzhuang.com/admin/admin_serv_makeinstall.jpg)
 
 ### 2.AdminService win编译
 创建build目录，解压 external.7z，external中是vs2012依赖库，目录结构如下：
@@ -68,10 +68,10 @@ AdminService\code
 AdminService\external
 ```
 使用CMake构建vs2012工程
-![](http://imgs.mulanshanzhuang.com/admin/admin_serv_cmake.jpg)
+![img](http://imgs.mulanshanzhuang.com/admin/admin_serv_cmake.jpg)
 
 工程生成在build目录，Open Project:
-![](http://imgs.mulanshanzhuang.com/admin/admin_serv_vs.jpg)
+![img](http://imgs.mulanshanzhuang.com/admin/admin_serv_vs.jpg)
 ## 三、web端
 
 使用vue.js ，依赖工具

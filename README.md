@@ -12,7 +12,7 @@ AdminModule\code\test\app\start_connect_local_svr.bat
 
 ## 一、定义命令&连接管理器
 
-##### 1. 项目需要包含AdminModule的静态库 nelmisc nelnet，增加.h包含目录 AdminModule\code\nel\include\\*
+##### 1. 项目需要包含AdminModule生成的静态库(nelmisc nelnet)，增加.h包含目录 AdminModule\code\nel\include\\*
 ##### 2. #include "nel/net/admin_module.h"
 ##### 3. 初始化服务管理模块
 ```cpp

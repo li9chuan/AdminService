@@ -1,0 +1,28 @@
+syntax = "proto3";
+package PB;
+
+message MsgSvr
+{
+	string     				shard          		= 1;
+	string					name				= 2;
+	int32					sid					= 3;
+	string					ip					= 4;
+}
+
+message MsgSvrList
+{
+    repeated    MsgSvr 		svrlist          	= 1;
+}
+
+
+
+message MsgExecCommand
+{
+	repeated    MsgSvr 		svrlist          	= 1;
+    string    				command          	= 2;
+	string 					result				= 3;
+	int32					runms				= 4;
+	string					from                = 5;
+}
+
+

@@ -1,0 +1,1 @@
+taskkill /f /im admin_sample_app.exe

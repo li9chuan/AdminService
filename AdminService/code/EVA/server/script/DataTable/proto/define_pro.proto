@@ -1,0 +1,15 @@
+syntax = "proto3";
+package PB;
+
+enum TEvent
+{
+	EventInvalid			                = 0;  		//  无效事件
+};
+
+
+
+
+
+
+
+

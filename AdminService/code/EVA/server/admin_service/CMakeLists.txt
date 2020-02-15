@@ -1,0 +1,20 @@
+FILE(GLOB SRC *.cpp *.h)
+
+ADD_EXECUTABLE(admin_service WIN32 ${SRC})
+
+INCLUDE_DIRECTORIES(${LIBEVENT_INCLUDE_DIR} ${OPENSSL_INCLUDE_DIR})
+
+TARGET_LINK_LIBRARIES(	admin_service
+                        ${CURL_LIBRARY}
+						servershare)
+
+NL_DEFAULT_PROPS(admin_service "Services: Admin Service (AS)")
+NL_ADD_RUNTIME_FLAGS(admin_service)
+
+#ADD_DEFINITIONS(${LIBXML2_DEFINITIONS})
+
+IF(WITH_PCH AND NOT MINGW) # FIXME: PCH too large (> 130MB), crashes cc1plus under MinGW
+  ADD_NATIVE_PRECOMPILED_HEADER(admin_service ${CMAKE_CURRENT_SOURCE_DIR}/stdpch.h ${CMAKE_CURRENT_SOURCE_DIR}/stdpch.cpp)
+ENDIF(WITH_PCH AND NOT MINGW)
+
+INSTALL(TARGETS admin_service RUNTIME DESTINATION sbin COMPONENT services)

@@ -6,7 +6,7 @@ windows可以启动以下批处理测试服务：
 ```cpp
 AdminModule\code\test\app\start_connect_local_svr.bat
 ```
-![markdown](http://imgs.mulanshanzhuang.com/admin/admin_web_exec.jpg "markdown")
+![](http://imgs.mulanshanzhuang.com/admin/admin_web_exec.jpg)
 
 
 ## 一、定义命令&连接管理器
@@ -54,11 +54,11 @@ cd build
 cmake ../code
 make
 ```
-![markdown](http://imgs.mulanshanzhuang.com/admin/admin_serv_make.jpg "markdown")
+![](http://imgs.mulanshanzhuang.com/admin/admin_serv_make.jpg)
 ```shell
 make install
 ```
-![markdown](http://imgs.mulanshanzhuang.com/admin/admin_serv_makeinstall.jpg "markdown")
+![](http://imgs.mulanshanzhuang.com/admin/admin_serv_makeinstall.jpg)
 
 ### 2.AdminService win编译
 创建build目录，解压 external.7z，external中是vs2012依赖库，目录结构如下：
@@ -68,10 +68,10 @@ AdminService\code
 AdminService\external
 ```
 使用CMake构建vs2012工程
-![markdown](http://imgs.mulanshanzhuang.com/admin/admin_serv_cmake.jpg "markdown")
+![](http://imgs.mulanshanzhuang.com/admin/admin_serv_cmake.jpg)
 
 工程生成在build目录，Open Project:
-![markdown](http://imgs.mulanshanzhuang.com/admin/admin_serv_vs.jpg "markdown")
+![](http://imgs.mulanshanzhuang.com/admin/admin_serv_vs.jpg)
 ## 三、web端
 
 使用vue.js ，依赖工具

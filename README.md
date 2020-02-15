@@ -2,6 +2,7 @@
 
 **管理C++服务，以及远程命令执行。包含AdminModule(lib,用于目标进程)，AdminService(web交互)，web(前端)三个工程。**
 DEMO： http://admin.mulanshanzhuang.com
+
 windows可以启动以下批处理测试服务：
 ```cpp
 AdminModule\code\test\app\start_connect_local_svr.bat
@@ -11,7 +12,7 @@ AdminModule\code\test\app\start_connect_local_svr.bat
 
 ## 一、定义命令&连接管理器
 
-##### 1. 项目需要包含AdminModule的静态库 nelmisc nelnet，引入头文件AdminModule\code\nel\include\\*
+##### 1. 项目需要包含AdminModule的静态库 nelmisc nelnet，增加.h包含目录 AdminModule\code\nel\include\\*
 ##### 2. #include "nel/net/admin_module.h"
 ##### 3. 初始化服务管理模块
 ```cpp

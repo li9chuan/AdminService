@@ -1,7 +1,6 @@
 # C++服务管理工具&cmd
 
-**管理C++服务，以及远程命令执行。包含AdminModule(lib,用于目标进程)，AdminService(web交互)，web(前端)三个工程。**
-github： https://github.com/li9chuan/AdminService
+**管理C++进程或服务，以及远程命令执行。包含AdminModule(lib,用于目标进程)，AdminService(web交互)，web(前端)三个工程。**
 DEMO： http://admin.mulanshanzhuang.com
 
 在原有进程中包含AdminModule库，初始化后即可连接AdminService，windows可以启动以下批处理测试服务：

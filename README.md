@@ -1,11 +1,12 @@
 # C++服务管理工具&cmd
 
 **管理C++服务，以及远程命令执行。包含AdminModule(lib,用于目标进程)，AdminService(web交互)，web(前端)三个工程。**
+github： https://github.com/li9chuan/AdminService
 DEMO： http://admin.mulanshanzhuang.com
 
-windows可以启动以下批处理测试服务：
+在原有进程中包含AdminModule库，初始化后即可连接AdminService，windows可以启动以下批处理测试服务：
 ```cpp
-AdminModule\code\test\app\start_connect_local_svr.bat
+AdminModule\code\test\app\start_connect_test_svr.bat
 ```
 ![img](http://imgs.mulanshanzhuang.com/admin/admin_web_exec.jpg)
 
@@ -41,7 +42,8 @@ NLMISC_COMMAND(square,"display the square of the parameter","<value>")
 	return true;
 }
 ```
-##### 7. 通过web端调用Command
+##### 7. 进程连接AdminService后，通过web端调用Command
+![img](http://imgs.mulanshanzhuang.com/admin/admin_web_square.jpg)
 
 ---
 ## 二、AdminService编译

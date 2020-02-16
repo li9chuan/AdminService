@@ -1,4 +1,4 @@
-# C++服务管理工具&cmd
+# C++服务管理工具&cmd远程执行
 
 **管理C++进程或服务，以及远程命令执行。包含AdminModule(lib,用于目标进程)，AdminService(web交互)，web(前端)三个工程。**
 DEMO： http://admin.mulanshanzhuang.com

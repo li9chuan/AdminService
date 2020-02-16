@@ -62,7 +62,7 @@ namespace NLNET {
  */
 CBufServerWebsocket::CBufServerWebsocket() :
 #ifdef NL_OS_UNIX
-    CBufNetBase(false),
+    CBufNetBase(true),
 #else
     CBufNetBase(),
 #endif
@@ -349,7 +349,7 @@ void	CBufServerWebsocket::sleepUntilDataAvailable( uint usecMax )
 		tv.tv_usec = usecMax;
 		int res = ::select( _DataAvailablePipeHandle[PipeRead]+1, &readers, NULL, NULL, &tv );
 		if ( res == -1 )
-			nlerror( "LNETL1: Select failed in sleepUntilDataAvailable (code %u)", CSock::getLastError() );
+			nlerror( "LNETL1: CBufServerWebsocket Select failed in sleepUntilDataAvailable (code %u)", CSock::getLastError() );
 	}
 	while ( ! dataAvailable() ); // will loop if only a connection/disconnection event was read
 }
